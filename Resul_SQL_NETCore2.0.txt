@@ -1,0 +1,46 @@
+moha@libre:~$ dotnet new console -o PrimeraAppConsoleNC
+	|
+	|
+	+
+moha@libre:~/PrimeraAppConsoleNC$ ls
+bin  obj  PrimeraAppConsoleNC.csproj  Program.cs 
+	|
+	|
+	+
+moha@libre:~$ sudo dotnet run --project PrimeraAppConsoleNC/PrimeraAppConsoleNC.csproj
+Hola!
+Esta es la primera aplicación NET Core 2.0
+-----------------------------------------------------------------------------------------
+Primer Acceso a SQL Server:
+moha@libre:~$ sqlcmd -S localhost -U SA -p
+Password: 
+1> 
+
+Creación:
+
+1> CREATE DATABASE testbb
+2> go
+
+Network packet size (bytes): 4096
+1 xact[s]:
+Clock Time (ms.): total       827  avg   827.0 (1.2 xacts per sec.)
+1> 
+
+Consulta:
+
+1> SELECT Name from sys.Databases;
+2> go
+Name                                                                                                                            
+-----------------------------------------------------------------------------------------
+master                                                                                                                          
+tempdb                                                                                                                          
+model                                                                                                                           
+msdb                                                                                                                            
+testbb                                                                                                                          
+
+(5 rows affected)
+
+Network packet size (bytes): 4096
+1 xact[s]:
+Clock Time (ms.): total        54  avg   54.0 (18.5 xacts per sec.)
+1> 
